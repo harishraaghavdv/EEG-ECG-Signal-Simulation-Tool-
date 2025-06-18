@@ -120,40 +120,7 @@ A comprehensive web application for generating synthetic EEG (Electroencephalogr
 6. **Generate signal** and view results
 7. **Download data** in CSV format or view plots
 
-### API Endpoints
 
-#### Health Check
-```bash
-GET /api/health
-```
-
-#### Get Signal Types
-```bash
-GET /api/eeg/types
-GET /api/ecg/types
-```
-
-#### Generate Signals
-```bash
-POST /api/generate/eeg
-POST /api/generate/ecg
-```
-
-**Request Body:**
-```json
-{
-  "type": "normal_awake",
-  "duration": 30,
-  "sampling_rate": 256
-}
-```
-
-#### Download Files
-```bash
-GET /api/download/{session_id}/csv
-GET /api/download/{session_id}/features
-GET /api/download/{session_id}/plot
-```
 
 ## Project Structure
 
@@ -181,21 +148,7 @@ mantra_dataset_demo/
 │   └── README.md                # This file
 ```
 
-## Development
 
-### Code Quality
-```bash
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run linting
-flake8 backend/
-black backend/
-isort backend/
-
-# Run tests
-pytest backend/tests/
-```
 
 ### Adding New Signal Types
 
